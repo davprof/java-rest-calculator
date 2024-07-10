@@ -10,7 +10,7 @@ public class CalculatorController {
     @Autowired
     private CalculatorService calculatorService;
 
-    @GetMapping("/calculator")
+    @GetMapping("/calculate")
     public double operation(@RequestParam String operation, @RequestParam double num1, @RequestParam double num2) {
         switch (operation) {
             case "add": return calculatorService.add(num1, num2);
